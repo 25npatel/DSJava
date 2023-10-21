@@ -16,71 +16,92 @@ public enum AgeGroup {CHILD, ADULT, SENIOR}
         //Asks the user for their age.
         System.out.print("Welcome to CougarCafe! Give me your age group (Enter 1 for CHILD, Enter 2 for ADULT, or Enter 3 for SENIOR) here: ");
         //Sets int age as the input of the user.
-        int ageGroup = in.nextInt();
+        int AgeGroup = in.nextInt();
+
+        System.out.print("What is the cost of your meal? Please enter here: ");
+        double costMeal = in.nextDouble();
 
         //Asks the user for the day of the week.
         System.out.print("I forgot what day it is today...can you tell me? (0 = SUN, ..., 6 = SAT) here: ");
         //Sets int val as the input of the user.
-        int val = in.nextInt();
+        int DayOfWeek = in.nextInt();
 
         //Monday Specials below for all age groups.
-        if (val == 1 && ageGroup == 1) {
-            System.out.println("Whatever food that you'd buy, you'd get a 7.5% discount!");
+        if (DayOfWeek == 1 && AgeGroup == 1) {
+            costMeal = costMeal - (costMeal * 0.075);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 1 && ageGroup == 2) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!"); 
+        if (DayOfWeek == 1 && AgeGroup == 2) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal); 
         }
-        if (val == 1 && ageGroup == 3) {
-            System.out.println("Whatever food that you'd buy, you'd get a 15% discount!");
+        if (DayOfWeek == 1 && AgeGroup == 3) {
+            costMeal = costMeal - (costMeal * 0.15);
+            System.out.println("Your total cost is $" + costMeal);
         }
 
         //Every other days below for the age groups that resonate with CHILD.
-        if (val == 2 && ageGroup == 1) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 2 && AgeGroup == 1) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 3 && ageGroup == 1) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 3 && AgeGroup == 1) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 4 && ageGroup == 1) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 4 && AgeGroup == 1) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 5 && ageGroup == 1) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 5 && AgeGroup == 1) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 6 && ageGroup == 1) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 6 && AgeGroup == 1) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
         //Every other days below for age groups that resonate with SENIOR.
-        if (val == 2 && ageGroup == 3) {
-            System.out.println("Whatever food that you'd buy, you'd get a 7.5% discount!");
+        if (DayOfWeek == 2 && AgeGroup == 3) {
+            costMeal = costMeal - (costMeal * 0.075);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 3 && ageGroup == 3) {
-            System.out.println("Whatever food that you'd buy, you'd get a 7.5% discount!");
+        if (DayOfWeek == 3 && AgeGroup == 3) {
+            costMeal = costMeal - (costMeal * 0.075);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 4 && ageGroup == 3) {
-            System.out.println("Whatever food that you'd buy, you'd get a 7.5% discount!");
+        if (DayOfWeek == 4 && AgeGroup == 3) {
+            costMeal = costMeal - (costMeal * 0.075);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 5 && ageGroup == 3) {
-            System.out.println("Whatever food that you'd buy, you'd get a 7.5% discount!");
+        if (DayOfWeek == 5 && AgeGroup == 3) {
+            costMeal = costMeal - (costMeal * 0.075);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 6 && ageGroup == 3) {
-            System.out.println("Whatever food that you'd buy, you'd get a 7.5% discount!");
+        if (DayOfWeek == 6 && AgeGroup == 3) {
+            costMeal = costMeal - (costMeal * 0.075);
+            System.out.println("Your total cost is $" + costMeal);
         }
         //Every other days for age groups that resonate with ADULT.
-        if (val == 2 && ageGroup == 2) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 2 && AgeGroup == 2) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 3 && ageGroup == 2) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 3 && AgeGroup == 2) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 4 && ageGroup == 2) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 4 && AgeGroup == 2) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 5 && ageGroup == 2) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 5 && AgeGroup == 2) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
-        if (val == 6 && ageGroup == 2) {
-            System.out.println("Whatever food that you'd buy, you'd get a 5% discount!");
+        if (DayOfWeek == 6 && AgeGroup == 2) {
+            costMeal = costMeal - (costMeal * 0.05);
+            System.out.println("Your total cost is $" + costMeal);
         }
     }
 }
