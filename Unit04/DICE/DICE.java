@@ -1,36 +1,36 @@
 class DiceRoll {
 
-    String [] D1 = { "+-------+",
+    String ONE = { "+-------+",
                      "|       |",
                      "|   0   |",
                      "|       |",
                      "+-------+"
                 };
-    String [] D2 = { "+-------+",
+    String TWO = { "+-------+",
                      "|     0 |",
                      "|       |",
                      "| 0     |",
                      "+-------+"
                 };
-    String [] D3 = { "+-------+",
+    String THREE = { "+-------+",
                      "|     0 |",
                      "|   0   |",
                      "| 0     |",
                      "+-------+"
                 };
-    String [] D4 = { "+-------+",
+    String FOUR = { "+-------+",
                      "| 0   0 |",
                      "|       |",
                      "| 0   0 |",
                      "+-------+"
                 };
-    String [] D5 = { "+-------+",
+    String FIVE = { "+-------+",
                      "| 0   0 |",
                      "|   0   |",
                      "| 0   0 |",
                      "+-------+"
                 };
-    String [] D6 = { "+-------+",
+    String SIX = { "+-------+",
                      "| 0   0 |",
                      "| 0   0 |",
                      "| 0   0 |",
@@ -39,9 +39,10 @@ class DiceRoll {
 }
 
 public class DICE {
-    public static void main(String[] args) {
-        for (int i = 1; i <= 1; i++) {
-            System.out.println(Math.random());
+    public static void main(String[] args) { 
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println();
         }
     }
 }
