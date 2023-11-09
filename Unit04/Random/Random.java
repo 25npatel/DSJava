@@ -1,9 +1,18 @@
+//Nabh Patel
+//30 October 2023
+
 public class Random {
     public static void main(String[] args) {
-        for (int i = 1; i <= 6; i++) {
-            double r = Math.random();
-            
-            System.out.println((int) (r * 10));
-        }
-    }
+
+    int r = 1;
+
+    for (int i = 1; i <= 10; i++) {
+
+        int random = (int) (Math.random() * 10);
+ 
+        }  
+        double avr = average(random);
+
+        System.out.println(avr);     
+    } 
 }
