@@ -1,5 +1,7 @@
 class DiceRoll {
 
+    
+
     String ONE = { "+-------+",
                      "|       |",
                      "|   0   |",
