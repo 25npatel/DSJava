@@ -49,11 +49,6 @@ public static void main(String[] args) {
             System.out.print(" ");
         }
 
-        if (startDate.equals("1 ")) {
-            System.out.print("  ");
-        }
-
-
         //if the day of the week is sunday make a whole new line for the next week.
         if (dayOfWeek == DayOfWeek.SUNDAY) {
         
@@ -64,7 +59,3 @@ public static void main(String[] args) {
         }
     }
 }
-
-
-
-
