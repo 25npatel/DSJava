@@ -7,7 +7,7 @@ public class HW18PartA {
 
     ArrayList<String> names = new ArrayList<String>(0);
 
-    System.out.println("Please enter a name below:");
+    System.out.println("Please enter a name below or enter '#' to quit:");
 
     while (true) {
 
@@ -15,7 +15,7 @@ public class HW18PartA {
             break;
         }
 
-        System.out.println("Please enter a name below:");
+        System.out.println("Please enter a name below or enter '#' to quit:");
         String name = in.nextLine();
 
         names.add(name);
@@ -30,5 +30,6 @@ public class HW18PartA {
 
         System.out.println();
 
+        in.close();
     }
 }
