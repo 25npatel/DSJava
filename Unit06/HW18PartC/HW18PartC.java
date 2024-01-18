@@ -24,13 +24,6 @@ public class HW18PartC {
 
     System.out.println();
 
-    double smallest = temperatures.get(0);
-        for (int i = 1; i < temperatures.size(); i++) {
-            if (temperatures.get(i) < smallest) {
-                smallest = temperatures.get(i);
-            }
-        }
-
     Collections.sort(temperatures);
 
     System.out.println(temperatures.get(0) + " <= lowest");
