@@ -1,0 +1,22 @@
+Quiz 1 100.0
+Quiz 2 90.0
+Quiz 3 80.0
+Quiz 4 70.0
+Quiz 5 110.0
+Quiz 6 120.0
+Quiz 7 60.0
+Quiz 8 80.0
+Quiz 9 90.0
+Quiz 10 100.0
+---------------
+Here is the average at this iteration: 100.0
+Here is the average at this iteration: 95.0
+Here is the average at this iteration: 90.0
+Here is the average at this iteration: 85.0
+Here is the average at this iteration: 90.0
+Here is the average at this iteration: 95.0
+Here is the average at this iteration: 90.0
+Here is the average at this iteration: 88.75
+Here is the average at this iteration: 88.88888888888889
+Here is the average at this iteration: 90.0
+---------------
