@@ -39,7 +39,6 @@ public class HW19PartA {
             System.out.println(printTemp + (printTemp == lowest ? " <= Lowest" : ""));
         }
 
-
         in.close();
     }  
 }
