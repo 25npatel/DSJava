@@ -12,11 +12,8 @@ public class HW20PartA {
         System.out.println("---------------------------------------");
         System.out.println("   ID  |    Name     |     Balance");
         System.out.println("---------------------------------------");
-        
-
      
         while (in.hasNext()) {
-
 
             String ID = in.next();
             System.out.print("000" + ID.substring(0, 3) + " |");
