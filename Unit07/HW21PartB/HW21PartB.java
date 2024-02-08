@@ -32,16 +32,23 @@ public class HW21PartB {
             if (lineScanner.hasNext()) {
                 String employee = lineScanner.next();
 
-            //If lineScanner reads anything before another "|", and there are only digits
-            //and numbers, then this will be assigned to the double variable called salesAmount.
-            if (lineScanner.hasNextDouble()) {
-                double salesAmount = lineScanner.nextDouble();
+            //If lineScanner reads anything as doubles or digits (as string), the String salesValue,
+            //will be assigned to that line of string.  
+            if (lineScanner.hasNext()) {
+                String salesValue = lineScanner.next();
+            
+            //If salesValue is "n/a", print it as it is. Else, print it as a double as it is a double. 
+            if (salesValue.equalsIgnoreCase("n/a")) {
 
-                //Prints the category, employee, and the salesAmount (formatted).
-                System.out.printf("%-18s | %-10s | $%9.2f%n", category, employee, salesAmount);
+                System.out.printf("%-18s | %-10s | %-12s%n", category, employee, salesValue);
+            } else {
+
+                double salesAmount = Double.parseDouble(salesValue);
+                System.out.printf("%-18s | %-10s | $%,11.2f%n", category, employee, salesAmount);
             }
         }
     }
+}
 
     //lineScanner scanner class closes.
     lineScanner.close();
