@@ -4,7 +4,7 @@ public class Geometry {
 
     public static double calcVolSphere(double r) {
 
-        double volume = 4/3 * Math.PI * (r * r * r);
+        double volume = ((4 *(Math.PI) * (r * r * r))/3);
 
         return volume;
     }
