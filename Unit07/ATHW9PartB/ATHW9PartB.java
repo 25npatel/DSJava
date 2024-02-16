@@ -12,5 +12,6 @@ public class ATHW9PartB {
         System.out.println("Volume of sphere: " + Geometry.calcVolSphere(r));
         System.out.println("Surface Area of sphere: " + Geometry.calcSurfSphere(r));
         
+        in.close();
     }
 }
