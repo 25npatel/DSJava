@@ -48,10 +48,10 @@ public class Yard {
         return yard.length - 2; 
     }
 
-    //public int getLawnWidth() {
+    public int getLawnWidth() {
 
-        //return yard[0].length - 2; 
-    //}
+        return yard[0].length - 2; 
+    }
 
     //Printing the yard by traversing through the 2D array.
     public void printYard() {
