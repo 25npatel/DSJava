@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 //Class called cashRegister.
-class cashRegister {
+class CashRegisterSystem {
 
     //Declared a new ArrayList called "items"
     private ArrayList<Double> items = new ArrayList<>();
@@ -18,7 +18,7 @@ class cashRegister {
     private int itemCount;
 
     //Set the variables to zero.
-    public cashRegister() {
+    public CashRegisterSystem() {
 
         totalPrice = 0;
 
@@ -80,13 +80,17 @@ class cashRegister {
     }
 }
 
-public class CashRegister {
+//public interface called CashRegister.
+public class cashRegister {
     public static void main(String[] args) {
 
+        //Declared a new scanner called "in".
         Scanner in = new Scanner(System.in);
 
-        cashRegister cr = new cashRegister();
+        //Declaring a new cashRegister called "cr".
+        CashRegisterSystem cr = new CashRegisterSystem();
 
+        //Instructions and Guidence for the user.
         System.out.println("Enter 't' to display the sales total and item count.");
 
         System.out.println("Enter 'd' to delete the most recent sale.");
@@ -95,10 +99,13 @@ public class CashRegister {
 
         System.out.println("Enter 'q' to quit.");
 
+        //While Loop.
         while (true) {
 
+            //Asking the user for cost.
             System.out.println("Please add the cost of your item or enter 'q' to quit:");
 
+            //If the user inputs a number, then add the cost and item into the array.
             if (in.hasNextDouble()) {
 
                 double price = in.nextDouble();
@@ -108,18 +115,24 @@ public class CashRegister {
 
                 String command = in.next();
 
+                //Getting the total sales and transaction.
                 if (command.equals("t")) {
 
                     System.out.println("Total Sales: $" + cr.getTotal());
 
                     System.out.println("Total Count: " + cr.getCount());
 
+                //Removing the latest item and sale.
                 } else if (command.equals("d")) {
 
                     cr.removeItem();
+                
+                //Clearing.
                 } else if (command.equals("c")) {
 
                     cr.clear();
+                
+                //Quitting.
                 } else if (command.equals("q")) {
 
                     System.out.println("Good Night!");
@@ -129,6 +142,7 @@ public class CashRegister {
             }
         }
 
+        //Closing Scanner "in".
         in.close();
     }
 }
