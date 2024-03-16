@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 //Class called cashRegister.
-class CashRegister {
+class cashRegister {
 
     //Declared a new ArrayList called "items"
     private ArrayList<Double> items = new ArrayList<>();
@@ -18,7 +18,7 @@ class CashRegister {
     private int itemCount;
 
     //Set the variables to zero.
-    public CashRegister() {
+    public cashRegister() {
 
         totalPrice = 0;
 
@@ -85,7 +85,7 @@ public class CashRegister {
 
         Scanner in = new Scanner(System.in);
 
-        CashRegister cr = new CashRegister();
+        cashRegister cr = new cashRegister();
 
         System.out.println("Enter 't' to display the sales total and item count.");
 
