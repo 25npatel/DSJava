@@ -80,7 +80,7 @@ class CashRegister {
     }
 }
 
-public class CashRegisterExample {
+public class CashRegister {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
