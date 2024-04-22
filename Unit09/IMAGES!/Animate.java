@@ -1,7 +1,7 @@
 import java.awt.EventQueue;
-import animate.Application;
+import animate.*;
 
-public class Animation {
+public class Animate {
     public static void main(String[] args) {
     
         EventQueue.invokeLater(() -> {
