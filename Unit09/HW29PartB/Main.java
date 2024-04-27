@@ -1,31 +1,64 @@
-//Nabh Patel
-//April 8th, 2024
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import util.Employee;
+import util.Manager;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        ArrayList<Employee> employees = new ArrayList<>();
+        while (true) {
+            System.out.print("Enter a letter ((E)mployee, (M)anager, or (Q)uit): ");
+            String choice = in.nextLine().toLowerCase();
+            String name;
+            double salary;
+            double bonus;
+            if (choice.equals("q")) {
+                // exit the loop.
+                break;
+            } else if (choice.equals("e")) {
+                // create a new employee;
+                System.out.print("Enter name: ");
+                name = in.nextLine();
+                System.out.print("Enter salary (as a double): ");
+                salary = Double.parseDouble(in.nextLine());
+                Employee employee = new Employee(name, salary);
 
-        //Adding a blank line for readability.
+                // add to array list.
+                employees.add(employee);
+            } else if (choice.equals("m")) {
+                // create a new manager;
+                System.out.print("Enter name: ");
+                name = in.nextLine();
+                System.out.print("Enter salary (as a double): ");
+                salary = Double.parseDouble(in.nextLine());
+                System.out.print("Enter bonus (as a double): ");
+                bonus = Double.parseDouble(in.nextLine());
+                Manager manager = new Manager(name, salary, bonus);
+
+                // add to array list.
+                employees.add(manager);
+            } else {
+                System.out.println("I don't understand your choice.");
+            }
+
+            // put a newline to make it easier to read.
+            System.out.println();
+        }
+
+        // insert newline to make it easier to read.
         System.out.println();
 
-        //Creating a new Employee called "employee".
-        Employee employee = new Employee("John Doe", 50000, 2000);
+        // after entering in data, loop through the array list and display info.
+        System.out.printf("Your company has %d employees.%n", employees.size());
+        System.out.println();
 
-        //Printing the Employee's name.
-        System.out.println("Employee: " + employee.getName());
+        for (Employee employee : employees) {
+            employee.displayInfo();
+            System.out.println();
+        }
 
-        //Printing the Employee's annual income (without the bonus).
-        System.out.println("Annual Income: $" + employee.getAnnualIncome());
-
-        //Adding a blank line for readability.
-        System.out.println(); 
-
-        //Creating a new Manager called "manager".
-        Manager manager = new Manager("Jane Smith", 50000, 2000);
-
-        //Printing the Manager's name.
-        System.out.println("Manager: " + manager.getName());
-
-        //Printing the Manger's annual income (with the bonus).
-        System.out.println("Annual Income: $" + manager.getAnnualIncome());
+        in.close();
     }
 }

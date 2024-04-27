@@ -1,11 +1,13 @@
-//Employee Class.
+package util;
 
 public class Employee {
-
     private String name;
     private double salary;
 
-    public Employee(String name, double salary, double bonus) {
+    /*
+     * Constructor.
+     */
+    public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
     }
@@ -29,6 +31,11 @@ public class Employee {
     public double getAnnualIncome() {
         // Employees only get an annual salary.
         return getSalary();
+    }
+
+    public void displayInfo() {
+        System.out.println(name + ":");
+        System.out.printf("  Salary = $%,12.2f%n", salary);
     }
 }
 
