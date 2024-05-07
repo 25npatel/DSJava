@@ -3,8 +3,8 @@ import javax.swing.JFrame;
 
 public class Application extends JFrame {
 
-    //private final int FRAME_WIDTH = 640;
-    //private final int FRAME_HEIGHT = 480;
+    private final int FRAME_WIDTH = 720;
+    private final int FRAME_HEIGHT = 720;
 
     /*
      * Constructor.
@@ -33,7 +33,7 @@ public class Application extends JFrame {
 
         // Use the inherited setSize() method
         // to set the size of our frame.
-        // this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
         // add a Board to our JFrame.
         Board board = new Board();

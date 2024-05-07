@@ -22,22 +22,25 @@ public class Board extends JPanel {
     private static final int DELAY = 25; // Delay for timer in milliseconds
 
     public Board() {
+
+
         setBackground(Color.CYAN);
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
 
         // Load the image
         try {
+
             File imgFile = new File("media/Andy.png");
             img = ImageIO.read(imgFile);
-            setPreferredSize(new Dimension(img.getWidth(), img.getHeight()));
+            setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
         } catch (Exception e) {
             System.err.println("Unable to open image file");
             System.err.println(e.getMessage());
         }
 
         // Initialize position and rotation angle
-        x = 0;
-        y = 0;
+        double x = 0;
+        double y = 0;
         rotationAngle = 0;
 
         // Create and start the timer

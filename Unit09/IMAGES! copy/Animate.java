@@ -6,7 +6,7 @@ public class Animate {
     
         EventQueue.invokeLater(() -> {
             
-            Application myApp = new Application("PartB");
+            Application myApp = new Application("PartB*");
             myApp.setVisible(true);
             
         });
