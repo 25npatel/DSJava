@@ -4,22 +4,16 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.Shape;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.geom.AffineTransform;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-
 import javax.swing.JPanel;
 
 public class Board extends JPanel implements KeyListener{
 
     private static final int B_WIDTH = 1550;
     private static final int B_HEIGHT = 850;
-    private static final int SIDE_LEN = 150;
     private static final int FLOOR = B_HEIGHT - 25;
+    private Cannon cannon;
 
     public Board() {
 
@@ -28,6 +22,7 @@ public class Board extends JPanel implements KeyListener{
 
         this.setFocusable(true);
         this.addKeyListener(this);
+        cannon = new Cannon();
     }
 
     @Override
@@ -43,6 +38,8 @@ public class Board extends JPanel implements KeyListener{
 
         g2d.setColor(Color.GREEN);
         g2d.fillRect(0, FLOOR + 1, B_WIDTH, B_HEIGHT - FLOOR - 1);
+
+        cannon.draw(g2d);
     }
 
     @Override
@@ -58,25 +55,43 @@ public class Board extends JPanel implements KeyListener{
 
         if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 
+            cannon.fireCannon();
+
             System.out.println("SPACEBAR was pressed!");
         }
 
         if (e.getKeyCode() == KeyEvent.VK_UP) {
+
+            cannon.rotateCannonCounterclockwise();
+
+            repaint();
 
             System.out.println("UP arrow was pressed!");
         }
 
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 
+            cannon.rotateCannonCounterclockwise();
+
+            repaint();
+
             System.out.println("LEFT arrow was pressed!");
         }
 
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 
+            cannon.rotateCannonClockwise();
+
+            repaint();
+
             System.out.println("DOWN arrow was pressed!");
         }
 
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+
+            cannon.rotateCannonClockwise();
+            
+            repaint();
 
             System.out.println("RIGHT arrow was pressed!");
         }
