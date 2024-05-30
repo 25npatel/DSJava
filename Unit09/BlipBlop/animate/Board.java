@@ -17,10 +17,10 @@ public class Board extends JPanel implements MouseListener {
         setBackground(Color.CYAN);
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
 
-        // Load sound clips
+        //Load sound clips
         loadSoundClips();
 
-        // Place the circle in the center of the board
+        //Place the circle in the center of the board
         circleX = (B_WIDTH - circleDiameter) / 2;
         circleY = (B_HEIGHT - circleDiameter) / 2;
 

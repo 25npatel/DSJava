@@ -42,12 +42,12 @@ public class Board extends JPanel {
 
         }
 
-        imgX = 0; // Start image at the center of the screen
+        imgX = 0; //Start image at the center of the screen
         imgY = 0;
         dx = getRandomVelocity();
         dy = getRandomVelocity();
 
-        // Start timer to update animation
+        //Start timer to update animation
         Timer timer = new Timer(25, e -> {
             update();
             repaint();
@@ -56,7 +56,7 @@ public class Board extends JPanel {
     }
 
     private void update() {
-        // Update image position
+        //Update image position
         imgX += dx;
         imgY += dy;
 
